@@ -3,7 +3,7 @@ node {
 
     docker.withRegistry('https://hub.docker.com/', 'dockerhub') {
 
-        def customImage = docker.build("my-image:${env.BUILD_ID}")
+        def customImage = docker.build("karthikaram/dockerize-jenkins-node-app")
 
         /* Push the container to the custom Registry */
         customImage.push()
